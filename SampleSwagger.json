@@ -1,4 +1,3 @@
-
 {
   "swagger": "2.0",
   "info": {
@@ -115,25 +114,6 @@
     }
   },
   "definitions": {
-    "Patient": {
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/Patient"
-        },
-        {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        }
-      ]
-    },
     "Patient": {
       "type": "object",
       "required": [
