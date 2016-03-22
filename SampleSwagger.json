@@ -67,6 +67,46 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "identifier",
+            "in": "query",
+            "description": "Identifire of patient to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "ID of patient to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of patient to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "given",
+            "in": "query",
+            "description": "Given Name of patient to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "description": "Active Records",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
           }
         ],
         "responses": {
@@ -106,6 +146,39 @@
         "responses": {
           "200": {
             "description": "FHIR response",
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Updates patient",
+        "operationId": "update patient",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "Patient",
+            "in": "body",
+            "description": "Add patient to the OpenMRS",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "FHIR server response",
             "schema": {
               "$ref": "#/definitions/Patient"
             }
