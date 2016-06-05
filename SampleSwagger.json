@@ -29,7 +29,7 @@
           "in" : "body",
           "description" : "Encounter resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Encounter"
@@ -130,7 +130,7 @@
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/DiagnosticReport"
@@ -196,7 +196,7 @@
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Person"
@@ -324,7 +324,7 @@
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Observation"
@@ -357,7 +357,7 @@
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Observation"
@@ -396,15 +396,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "The subject that the observation is about (if patient)",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "subject",
           "in" : "query",
           "description" : "The subject that the observation is about",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "The subject that the observation is about (if patient)",
           "required" : false,
           "type" : "string"
         }, {
@@ -526,7 +526,7 @@
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Location"
@@ -638,7 +638,7 @@
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/DiagnosticReport"
@@ -671,7 +671,7 @@
           "in" : "body",
           "description" : "Practitioner resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Practitioner"
@@ -842,7 +842,7 @@
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Patient"
@@ -988,7 +988,7 @@
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Patient"
@@ -1071,7 +1071,7 @@
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Person"
@@ -1174,7 +1174,7 @@
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
-          "type" : "string",
+          "type" : "object",
           "schema" : {
             "type" : "object",
             "$ref" : "#/definitions/Location"
@@ -1271,6 +1271,15 @@
     "Condition" : {
       "type" : "object"
     },
+    "Bundle" : {
+      "type" : "object"
+    },
+    "DiagnosticReport" : {
+      "type" : "object"
+    },
+    "Patient" : {
+      "type" : "object"
+    },
     "Practitioner" : {
       "type" : "object"
     },
@@ -1286,13 +1295,7 @@
     "Observation" : {
       "type" : "object"
     },
-    "DiagnosticReport" : {
-      "type" : "object"
-    },
     "Encounter" : {
-      "type" : "object"
-    },
-    "Patient" : {
       "type" : "object"
     },
     "Person" : {
