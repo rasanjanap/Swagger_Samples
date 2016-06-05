@@ -22,11 +22,10 @@
   "paths" : {
     "/Encounter" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Encounter resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "encounter",
+          "name" : "body",
           "in" : "body",
           "description" : "Encounter resource object",
           "required" : true,
@@ -54,17 +53,16 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Encounter matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "part-of",
+          "name" : "patient",
           "in" : "query",
           "description" : "",
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "patient",
+          "name" : "part-of",
           "in" : "query",
           "description" : "",
           "required" : false,
@@ -82,15 +80,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "part-of",
+          "in" : "query",
+          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
@@ -114,7 +112,6 @@
     },
     "/AllergyIntolerance/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns AllergyIntolerance details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -144,11 +141,10 @@
     },
     "/DiagnosticReport" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create DiagnosticReport resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "diagnosticreport",
+          "name" : "body",
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
@@ -176,7 +172,6 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns DiagnosticReport matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -212,11 +207,10 @@
     },
     "/Person" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Person resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "person",
+          "name" : "body",
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
@@ -244,16 +238,9 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Person matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of name in any name part",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
@@ -269,6 +256,12 @@
           "name" : "gender",
           "in" : "query",
           "description" : "The gender of the person",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A portion of name in any name part",
           "required" : false,
           "type" : "string"
         }, {
@@ -298,7 +291,6 @@
     },
     "/Observation/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Observation details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -326,7 +318,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns Observation details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -350,11 +341,10 @@
         }
       },
       "put" : {
-        "descritpion" : "",
         "summary" : "Create Observation resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "observation",
+          "name" : "body",
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
@@ -384,11 +374,10 @@
     },
     "/Observation" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Observation resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "observation",
+          "name" : "body",
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
@@ -416,7 +405,6 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Observation matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -488,7 +476,6 @@
     },
     "/FamilyMemberHistory/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns FamilyMemberHistory details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -518,7 +505,6 @@
     },
     "/Location/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Location details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -546,7 +532,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns Location details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -570,11 +555,10 @@
         }
       },
       "put" : {
-        "descritpion" : "",
         "summary" : "Create Location resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "location",
+          "name" : "body",
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
@@ -604,7 +588,6 @@
     },
     "/Condition/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Condition details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -634,7 +617,6 @@
     },
     "/DiagnosticReport/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns DiagnosticReport details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -662,7 +644,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns DiagnosticReport details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -686,11 +667,10 @@
         }
       },
       "put" : {
-        "descritpion" : "",
         "summary" : "Create DiagnosticReport resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "diagnosticreport",
+          "name" : "body",
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
@@ -720,11 +700,10 @@
     },
     "/Practitioner" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Practitioner resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "practitioner",
+          "name" : "body",
           "in" : "body",
           "description" : "Practitioner resource object",
           "required" : true,
@@ -752,25 +731,12 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Practitioner matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "identifier",
           "in" : "query",
           "description" : "A practitioner's Identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of either family or given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "given",
-          "in" : "query",
-          "description" : "A portion of the given name",
           "required" : false,
           "type" : "string"
         }, {
@@ -783,6 +749,18 @@
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A portion of either family or given name",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "given",
+          "in" : "query",
+          "description" : "A portion of the given name",
           "required" : false,
           "type" : "string"
         } ],
@@ -806,25 +784,24 @@
     },
     "/AllergyIntolerance" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns AllergyIntolerance matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
@@ -848,7 +825,6 @@
     },
     "/Encounter/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Encounter details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -876,7 +852,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns Encounter details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -902,11 +877,10 @@
     },
     "/Patient" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Patient resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "patient",
+          "name" : "body",
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
@@ -934,7 +908,6 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Patient matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1000,7 +973,6 @@
     },
     "/Patient/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Patient details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1028,7 +1000,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns Patient details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1052,11 +1023,10 @@
         }
       },
       "put" : {
-        "descritpion" : "",
         "summary" : "Create Patient resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "patient",
+          "name" : "body",
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
@@ -1086,7 +1056,6 @@
     },
     "/Person/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Person details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1114,7 +1083,6 @@
         }
       },
       "delete" : {
-        "descritpion" : "",
         "summary" : "Returns Person details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1138,11 +1106,10 @@
         }
       },
       "put" : {
-        "descritpion" : "",
         "summary" : "Create Person resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "person",
+          "name" : "body",
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
@@ -1172,19 +1139,18 @@
     },
     "/Condition" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Condition matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "patient",
           "in" : "query",
           "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -1208,19 +1174,18 @@
     },
     "/FamilyMemberHistory" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns FamilyMemberHistory matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "The identity of a subject to list family member history items for",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "The identity of a subject to list family member history items for",
           "required" : false,
           "type" : "string"
         } ],
@@ -1244,11 +1209,10 @@
     },
     "/Location" : {
       "post" : {
-        "descritpion" : "",
         "summary" : "Create Location resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "location",
+          "name" : "body",
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
@@ -1276,7 +1240,6 @@
         }
       },
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Location matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
@@ -1286,15 +1249,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A (portion of the) name of the location",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A (portion of the) name of the location",
           "required" : false,
           "type" : "string"
         } ],
@@ -1318,7 +1281,6 @@
     },
     "/Practitioner/{id}" : {
       "get" : {
-        "descritpion" : "",
         "summary" : "Returns Practitioner details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
