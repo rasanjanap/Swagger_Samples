@@ -54,24 +54,6 @@
         "summary" : "Returns Encounter matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
@@ -87,6 +69,24 @@
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "part-of",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
@@ -114,21 +114,21 @@
         "summary" : "Returns AllergyIntolerance matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
@@ -248,6 +248,12 @@
         "summary" : "Returns Person matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "name",
           "in" : "query",
           "description" : "A portion of name in any name part",
@@ -269,12 +275,6 @@
           "name" : "name",
           "in" : "query",
           "description" : "A portion of name in any name part",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -330,6 +330,24 @@
         "summary" : "Returns Observation matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "code",
+          "in" : "query",
+          "description" : "The code of the observation type",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "subject",
+          "in" : "query",
+          "description" : "The subject that the observation is about",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "code",
+          "in" : "query",
+          "description" : "The code of the observation type",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "date",
           "in" : "query",
           "description" : "Obtained date/time. If the obtained element is a period, a date that falls in the period",
@@ -345,24 +363,6 @@
           "name" : "value-concept",
           "in" : "query",
           "description" : "The value of the observation, if the value is a CodeableConcept",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject that the observation is about",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
           "required" : false,
           "type" : "string"
         }, {
@@ -430,6 +430,24 @@
         "summary" : "Returns Observation matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "code",
+          "in" : "query",
+          "description" : "The code of the observation type",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "subject",
+          "in" : "query",
+          "description" : "The subject that the observation is about",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "code",
+          "in" : "query",
+          "description" : "The code of the observation type",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "date",
           "in" : "query",
           "description" : "Obtained date/time. If the obtained element is a period, a date that falls in the period",
@@ -445,24 +463,6 @@
           "name" : "value-concept",
           "in" : "query",
           "description" : "The value of the observation, if the value is a CodeableConcept",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject that the observation is about",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
           "required" : false,
           "type" : "string"
         }, {
@@ -566,6 +566,12 @@
         "summary" : "Returns Location matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A (portion of the) name of the location",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "status",
           "in" : "query",
           "description" : "Searches for locations with a specific kind of status",
@@ -575,12 +581,6 @@
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A (portion of the) name of the location",
           "required" : false,
           "type" : "string"
         } ],
@@ -736,9 +736,21 @@
         "summary" : "Returns Practitioner matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "identifier",
+          "in" : "query",
+          "description" : "A practitioner's Identifier",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         }, {
@@ -751,18 +763,6 @@
           "name" : "given",
           "in" : "query",
           "description" : "A portion of the given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A practitioner's Identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -818,24 +818,6 @@
         "summary" : "Returns Encounter matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
@@ -851,6 +833,24 @@
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "part-of",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
@@ -912,6 +912,12 @@
           "required" : false,
           "type" : "string"
         }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name of the patient",
@@ -939,12 +945,6 @@
           "name" : "careprovider",
           "in" : "query",
           "description" : "Patient's nominated care provider, could be a care manager, not the organization that manages the record",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -1030,6 +1030,12 @@
           "required" : false,
           "type" : "string"
         }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name of the patient",
@@ -1057,12 +1063,6 @@
           "name" : "careprovider",
           "in" : "query",
           "description" : "Patient's nominated care provider, could be a care manager, not the organization that manages the record",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -1118,6 +1118,12 @@
         "summary" : "Returns Person matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "name",
           "in" : "query",
           "description" : "A portion of name in any name part",
@@ -1139,12 +1145,6 @@
           "name" : "name",
           "in" : "query",
           "description" : "A portion of name in any name part",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -1200,6 +1200,12 @@
         "summary" : "Returns Location matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A (portion of the) name of the location",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "status",
           "in" : "query",
           "description" : "Searches for locations with a specific kind of status",
@@ -1209,12 +1215,6 @@
           "name" : "_id",
           "in" : "query",
           "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A (portion of the) name of the location",
           "required" : false,
           "type" : "string"
         } ],
@@ -1270,9 +1270,21 @@
         "summary" : "Returns Practitioner matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
+          "name" : "identifier",
+          "in" : "query",
+          "description" : "A practitioner's Identifier",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         }, {
@@ -1285,18 +1297,6 @@
           "name" : "given",
           "in" : "query",
           "description" : "A portion of the given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A practitioner's Identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         } ],
@@ -1317,6 +1317,47 @@
           }
         }
       }
+    }
+  },
+  "definitions" : {
+    "Condition" : {
+      "type" : "object"
+    },
+    "DiagnosticReport" : {
+      "type" : "object"
+    },
+    "Patient" : {
+      "type" : "object"
+    },
+    "Practitioner" : {
+      "type" : "object"
+    },
+    "AllergyIntolerance" : {
+      "type" : "object"
+    },
+    "FamilyMemberHistory" : {
+      "type" : "object"
+    },
+    "StructureDefinition" : {
+      "type" : "object"
+    },
+    "OperationOutcome" : {
+      "type" : "object"
+    },
+    "Observation" : {
+      "type" : "object"
+    },
+    "Encounter" : {
+      "type" : "object"
+    },
+    "Person" : {
+      "type" : "object"
+    },
+    "GeneralError" : {
+      "type" : "object"
+    },
+    "Location" : {
+      "type" : "object"
     }
   },
   "externalDocs" : {
