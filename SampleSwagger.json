@@ -15,7 +15,7 @@
       "url" : "http://openmrs.org/license/"
     }
   },
-  "host" : "localhost:8080/openmrsws/fhir",
+  "host" : "localhost:8080/openmrs/ws/fhir",
   "basePath" : "/",
   "consumes" : [ "application/xml", "application/json" ],
   "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -54,24 +54,6 @@
         "summary" : "Returns Encounter matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "patient",
           "in" : "query",
           "description" : "",
@@ -85,6 +67,24 @@
           "type" : "string"
         }, {
           "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "part-of",
           "in" : "query",
           "description" : "",
           "required" : false,
@@ -110,33 +110,21 @@
     },
     "/AllergyIntolerance/{id}" : {
       "get" : {
-        "descritpion" : "Search AllergyIntolerance by parameters",
-        "summary" : "Returns AllergyIntolerance matching results",
+        "descritpion" : "Get AllergyIntolerance resource by id",
+        "summary" : "Returns AllergyIntolerance details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  AllergyIntolerance resource",
+          "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of AllergyIntolerance resources",
+            "description" : "Returns AllergyIntolerance details of given id",
             "schema" : {
-              "type" : "array",
+              "type" : "object",
               "$ref" : "#/definitions/AllergyIntolerance"
             }
           },
@@ -254,12 +242,6 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of name in any name part",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "birthdate",
           "in" : "query",
           "description" : "The person's date of birth",
@@ -269,6 +251,12 @@
           "name" : "gender",
           "in" : "query",
           "description" : "The gender of the person",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "A portion of name in any name part",
           "required" : false,
           "type" : "string"
         }, {
@@ -297,7 +285,59 @@
       }
     },
     "/Observation/{id}" : {
-      "post" : {
+      "get" : {
+        "descritpion" : "Get Observation resource by id",
+        "summary" : "Returns Observation details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Observation resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Returns Observation details of given id",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/Observation"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "descritpion" : "Delete Observation resource by id",
+        "summary" : "Returns Observation details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Observation resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Delete Observation details of given id"
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put" : {
         "descritpion" : "Create Observation resource",
         "summary" : "Create Observation resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -314,76 +354,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/OperationOutcome"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "get" : {
-        "descritpion" : "Search Observation by parameters",
-        "summary" : "Returns Observation matching results",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject that the observation is about",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "code",
-          "in" : "query",
-          "description" : "The code of the observation type",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "date",
-          "in" : "query",
-          "description" : "Obtained date/time. If the obtained element is a period, a date that falls in the period",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject that the observation is about",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "value-concept",
-          "in" : "query",
-          "description" : "The value of the observation, if the value is a CodeableConcept",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "The subject that the observation is about (if patient)",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Bundle of Observation resources",
-            "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/Observation"
             }
           },
           "404" : {
@@ -430,15 +400,9 @@
         "summary" : "Returns Observation matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "code",
+          "name" : "patient",
           "in" : "query",
-          "description" : "The code of the observation type",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject that the observation is about",
+          "description" : "The subject that the observation is about (if patient)",
           "required" : false,
           "type" : "string"
         }, {
@@ -466,9 +430,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "patient",
+          "name" : "code",
           "in" : "query",
-          "description" : "The subject that the observation is about (if patient)",
+          "description" : "The code of the observation type",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "subject",
+          "in" : "query",
+          "description" : "The subject that the observation is about",
           "required" : false,
           "type" : "string"
         }, {
@@ -498,27 +468,21 @@
     },
     "/FamilyMemberHistory/{id}" : {
       "get" : {
-        "descritpion" : "Search FamilyMemberHistory by parameters",
-        "summary" : "Returns FamilyMemberHistory matching results",
+        "descritpion" : "Get FamilyMemberHistory resource by id",
+        "summary" : "Returns FamilyMemberHistory details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "The identity of a subject to list family member history items for",
-          "required" : false,
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  FamilyMemberHistory resource",
+          "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of FamilyMemberHistory resources",
+            "description" : "Returns FamilyMemberHistory details of given id",
             "schema" : {
-              "type" : "array",
+              "type" : "object",
               "$ref" : "#/definitions/FamilyMemberHistory"
             }
           },
@@ -533,7 +497,59 @@
       }
     },
     "/Location/{id}" : {
-      "post" : {
+      "get" : {
+        "descritpion" : "Get Location resource by id",
+        "summary" : "Returns Location details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Location resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Returns Location details of given id",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/Location"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "descritpion" : "Delete Location resource by id",
+        "summary" : "Returns Location details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Location resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Delete Location details of given id"
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put" : {
         "descritpion" : "Create Location resource",
         "summary" : "Create Location resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -560,71 +576,25 @@
             }
           }
         }
-      },
-      "get" : {
-        "descritpion" : "Search Location by parameters",
-        "summary" : "Returns Location matching results",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A (portion of the) name of the location",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "status",
-          "in" : "query",
-          "description" : "Searches for locations with a specific kind of status",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Bundle of Location resources",
-            "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/Location"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
       }
     },
     "/Condition/{id}" : {
       "get" : {
-        "descritpion" : "Search Condition by parameters",
-        "summary" : "Returns Condition matching results",
+        "descritpion" : "Get Condition resource by id",
+        "summary" : "Returns Condition details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Condition resource",
+          "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of Condition resources",
+            "description" : "Returns Condition details of given id",
             "schema" : {
-              "type" : "array",
+              "type" : "object",
               "$ref" : "#/definitions/Condition"
             }
           },
@@ -639,7 +609,59 @@
       }
     },
     "/DiagnosticReport/{id}" : {
-      "post" : {
+      "get" : {
+        "descritpion" : "Get DiagnosticReport resource by id",
+        "summary" : "Returns DiagnosticReport details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  DiagnosticReport resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Returns DiagnosticReport details of given id",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/DiagnosticReport"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "descritpion" : "Delete DiagnosticReport resource by id",
+        "summary" : "Returns DiagnosticReport details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  DiagnosticReport resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Delete DiagnosticReport details of given id"
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put" : {
         "descritpion" : "Create DiagnosticReport resource",
         "summary" : "Create DiagnosticReport resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -656,40 +678,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/OperationOutcome"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "get" : {
-        "descritpion" : "Search DiagnosticReport by parameters",
-        "summary" : "Returns DiagnosticReport matching results",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "subject",
-          "in" : "query",
-          "description" : "The subject of the report",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "service",
-          "in" : "query",
-          "description" : "Which diagnostic discipline/department created the report",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Bundle of DiagnosticReport resources",
-            "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/DiagnosticReport"
             }
           },
           "404" : {
@@ -736,21 +724,15 @@
         "summary" : "Returns Practitioner matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "identifier",
+          "name" : "_id",
           "in" : "query",
-          "description" : "A practitioner's Identifier",
+          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
           "required" : false,
           "type" : "string"
         }, {
@@ -763,6 +745,12 @@
           "name" : "given",
           "in" : "query",
           "description" : "A portion of the given name",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "identifier",
+          "in" : "query",
+          "description" : "A practitioner's Identifier",
           "required" : false,
           "type" : "string"
         } ],
@@ -784,24 +772,66 @@
         }
       }
     },
-    "/Encounter/{id}" : {
-      "post" : {
-        "descritpion" : "Create Encounter resource",
-        "summary" : "Create Encounter resource from the content of the request",
+    "/AllergyIntolerance" : {
+      "get" : {
+        "descritpion" : "Search AllergyIntolerance by parameters",
+        "summary" : "Returns AllergyIntolerance matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "encounter",
-          "in" : "body",
-          "description" : "Encounter resource object",
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Bundle of AllergyIntolerance resources",
+            "schema" : {
+              "type" : "array",
+              "$ref" : "#/definitions/AllergyIntolerance"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Encounter/{id}" : {
+      "get" : {
+        "descritpion" : "Get Encounter resource by id",
+        "summary" : "Returns Encounter details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Encounter resource",
           "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Returns success operation outcome",
+            "description" : "Returns Encounter details of given id",
             "schema" : {
               "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
+              "$ref" : "#/definitions/Encounter"
             }
           },
           "404" : {
@@ -813,54 +843,20 @@
           }
         }
       },
-      "get" : {
-        "descritpion" : "Search Encounter by parameters",
-        "summary" : "Returns Encounter matching results",
+      "delete" : {
+        "descritpion" : "Delete Encounter resource by id",
+        "summary" : "Returns Encounter details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "part-of",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "",
-          "required" : false,
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Encounter resource",
+          "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of Encounter resources",
-            "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/Encounter"
-            }
+            "description" : "Delete Encounter details of given id"
           },
           "404" : {
             "description" : "When error occurred",
@@ -912,12 +908,6 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "family",
           "in" : "query",
           "description" : "A portion of the family name of the patient",
@@ -947,6 +937,12 @@
           "description" : "Patient's nominated care provider, could be a care manager, not the organization that manages the record",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -968,15 +964,21 @@
     },
     "/StructureDefinition/{id}" : {
       "get" : {
-        "descritpion" : "Search StructureDefinition by parameters",
-        "summary" : "Returns StructureDefinition matching results",
+        "descritpion" : "Get StructureDefinition resource by id",
+        "summary" : "Returns StructureDefinition details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  StructureDefinition resource",
+          "required" : true,
+          "type" : "string"
+        } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of StructureDefinition resources",
+            "description" : "Returns StructureDefinition details of given id",
             "schema" : {
-              "type" : "array",
+              "type" : "object",
               "$ref" : "#/definitions/StructureDefinition"
             }
           },
@@ -991,7 +993,59 @@
       }
     },
     "/Patient/{id}" : {
-      "post" : {
+      "get" : {
+        "descritpion" : "Get Patient resource by id",
+        "summary" : "Returns Patient details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Patient resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Returns Patient details of given id",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/Patient"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "descritpion" : "Delete Patient resource by id",
+        "summary" : "Returns Patient details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Patient resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Delete Patient details of given id"
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put" : {
         "descritpion" : "Create Patient resource",
         "summary" : "Create Patient resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -1018,60 +1072,26 @@
             }
           }
         }
-      },
+      }
+    },
+    "/Person/{id}" : {
       "get" : {
-        "descritpion" : "Search Patient by parameters",
-        "summary" : "Returns Patient matching results",
+        "descritpion" : "Get Person resource by id",
+        "summary" : "Returns Person details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A patient identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "family",
-          "in" : "query",
-          "description" : "A portion of the family name of the patient",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of either family or given name of the patient",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "active",
-          "in" : "query",
-          "description" : "Whether the patient record is active",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "given",
-          "in" : "query",
-          "description" : "A portion of the given name of the patient",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "careprovider",
-          "in" : "query",
-          "description" : "Patient's nominated care provider, could be a care manager, not the organization that manages the record",
-          "required" : false,
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Person resource",
+          "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of Patient resources",
+            "description" : "Returns Person details of given id",
             "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/Patient"
+              "type" : "object",
+              "$ref" : "#/definitions/Person"
             }
           },
           "404" : {
@@ -1082,10 +1102,32 @@
             }
           }
         }
-      }
-    },
-    "/Person/{id}" : {
-      "post" : {
+      },
+      "delete" : {
+        "descritpion" : "Delete Person resource by id",
+        "summary" : "Returns Person details of given id",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Person resource",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Delete Person details of given id"
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put" : {
         "descritpion" : "Create Person resource",
         "summary" : "Create Person resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
@@ -1112,10 +1154,12 @@
             }
           }
         }
-      },
+      }
+    },
+    "/Condition" : {
       "get" : {
-        "descritpion" : "Search Person by parameters",
-        "summary" : "Returns Person matching results",
+        "descritpion" : "Search Condition by parameters",
+        "summary" : "Returns Condition matching results",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "_id",
@@ -1124,36 +1168,78 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "name",
+          "name" : "patient",
           "in" : "query",
-          "description" : "A portion of name in any name part",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "birthdate",
-          "in" : "query",
-          "description" : "The person's date of birth",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "gender",
-          "in" : "query",
-          "description" : "The gender of the person",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of name in any name part",
+          "description" : "",
           "required" : false,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Bundle of Person resources",
+            "description" : "Bundle of Condition resources",
             "schema" : {
               "type" : "array",
-              "$ref" : "#/definitions/Person"
+              "$ref" : "#/definitions/Condition"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/FamilyMemberHistory" : {
+      "get" : {
+        "descritpion" : "Search FamilyMemberHistory by parameters",
+        "summary" : "Returns FamilyMemberHistory matching results",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "query",
+          "description" : "The ID of the resource",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "The identity of a subject to list family member history items for",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Bundle of FamilyMemberHistory resources",
+            "schema" : {
+              "type" : "array",
+              "$ref" : "#/definitions/FamilyMemberHistory"
+            }
+          },
+          "404" : {
+            "description" : "When error occurred",
+            "schema" : {
+              "type" : "object",
+              "$ref" : "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/StructureDefinition" : {
+      "get" : {
+        "descritpion" : "Search StructureDefinition by parameters",
+        "summary" : "Returns StructureDefinition matching results",
+        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Bundle of StructureDefinition resources",
+            "schema" : {
+              "type" : "array",
+              "$ref" : "#/definitions/StructureDefinition"
             }
           },
           "404" : {
@@ -1237,74 +1323,22 @@
       }
     },
     "/Practitioner/{id}" : {
-      "post" : {
-        "descritpion" : "Create Practitioner resource",
-        "summary" : "Create Practitioner resource from the content of the request",
+      "get" : {
+        "descritpion" : "Get Practitioner resource by id",
+        "summary" : "Returns Practitioner details of given id",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
-          "name" : "practitioner",
-          "in" : "body",
-          "description" : "Practitioner resource object",
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Practitioner resource",
           "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "Returns success operation outcome",
+            "description" : "Returns Practitioner details of given id",
             "schema" : {
               "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "get" : {
-        "descritpion" : "Search Practitioner by parameters",
-        "summary" : "Returns Practitioner matching results",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A practitioner's Identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "family",
-          "in" : "query",
-          "description" : "A portion of the family name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of either family or given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "given",
-          "in" : "query",
-          "description" : "A portion of the given name",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Bundle of Practitioner resources",
-            "schema" : {
-              "type" : "array",
               "$ref" : "#/definitions/Practitioner"
             }
           },
