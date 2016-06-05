@@ -29,9 +29,7 @@
           "in" : "body",
           "description" : "Encounter resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Encounter"
           }
         } ],
@@ -130,9 +128,7 @@
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/DiagnosticReport"
           }
         } ],
@@ -196,9 +192,7 @@
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Person"
           }
         } ],
@@ -317,18 +311,22 @@
         }
       },
       "put" : {
-        "summary" : "Create Observation resource from the content of the request",
+        "summary" : "Update Observation resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Observation"
           }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Observation resource",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -357,9 +355,7 @@
           "in" : "body",
           "description" : "Observation resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Observation"
           }
         } ],
@@ -519,18 +515,22 @@
         }
       },
       "put" : {
-        "summary" : "Create Location resource from the content of the request",
+        "summary" : "Update Location resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Location"
           }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Location resource",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -631,18 +631,22 @@
         }
       },
       "put" : {
-        "summary" : "Create DiagnosticReport resource from the content of the request",
+        "summary" : "Update DiagnosticReport resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
           "description" : "DiagnosticReport resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/DiagnosticReport"
           }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  DiagnosticReport resource",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -671,9 +675,7 @@
           "in" : "body",
           "description" : "Practitioner resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Practitioner"
           }
         } ],
@@ -842,9 +844,7 @@
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Patient"
           }
         } ],
@@ -981,18 +981,22 @@
         }
       },
       "put" : {
-        "summary" : "Create Patient resource from the content of the request",
+        "summary" : "Update Patient resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
           "description" : "Patient resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Patient"
           }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Patient resource",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -1064,18 +1068,22 @@
         }
       },
       "put" : {
-        "summary" : "Create Person resource from the content of the request",
+        "summary" : "Update Person resource from the content of the request",
         "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
           "description" : "Person resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Person"
           }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id of the  Person resource",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -1174,9 +1182,7 @@
           "in" : "body",
           "description" : "Location resource object",
           "required" : true,
-          "type" : "object",
           "schema" : {
-            "type" : "object",
             "$ref" : "#/definitions/Location"
           }
         } ],
