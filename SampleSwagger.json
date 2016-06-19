@@ -1,733 +1,1725 @@
 {
-  "swagger" : "2.0",
-  "info" : {
-    "version" : "1.0.0",
-    "title" : "OpenMRS FHIR REST Services",
-    "description" : "Auto-generated documentation for OpenMRS FHIR Rest services",
-    "termsOfService" : "https://www.mozilla.org/en-US/MPL/2.0/",
-    "contact" : {
-      "name" : "OpenMRS FHIR Module Team",
-      "url" : "https://talk.openmrs.org/c/dev",
-      "email" : "community@openmrs.org"
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "OpenMRS FHIR REST Services",
+    "description": "Auto-generated documentation for OpenMRS FHIR Rest services",
+    "termsOfService": "https://www.mozilla.org/en-US/MPL/2.0/",
+    "contact": {
+      "name": "OpenMRS FHIR Module Team",
+      "url": "https://talk.openmrs.org/c/dev",
+      "email": "community@openmrs.org"
     },
-    "license" : {
-      "name" : "Mozilla Public License, v. 2.0",
-      "url" : "http://openmrs.org/license/"
+    "license": {
+      "name": "Mozilla Public License, v. 2.0",
+      "url": "http://openmrs.org/license/"
     }
   },
-  "host" : "localhost:8080",
-  "basePath" : "/openmrs/ws/fhir",
-  "consumes" : [ "application/xml", "application/json" ],
-  "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-  "paths" : {
-    "/AllergyIntolerance/{id}" : {
-      "get" : {
-        "summary" : "Returns AllergyIntolerance details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  AllergyIntolerance resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns AllergyIntolerance details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/AllergyIntolerance"
+  "host": "localhost:8080",
+  "basePath": "/openmrs/ws/fhir",
+  "consumes": [
+    "application/xml",
+    "application/json"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "application/xml+fhir",
+    "application/json+fhir"
+  ],
+  "paths": {
+    "/Encounter": {
+      "post": {
+        "summary": "Create Encounter resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Encounter resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Encounter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Returns Encounter matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "patient",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "part-of",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Encounter resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Encounter"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Observation/{id}" : {
-      "get" : {
-        "summary" : "Returns Observation details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Observation resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Observation details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Observation"
+    "/AllergyIntolerance/{id}": {
+      "get": {
+        "summary": "Returns AllergyIntolerance details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  AllergyIntolerance resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns AllergyIntolerance details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/AllergyIntolerance"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "delete" : {
-        "summary" : "Returns Observation details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Observation resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete Observation details of given id"
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "put" : {
-        "summary" : "Update Observation resource from the content of the request",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "Observation resource object",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/Observation"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Observation resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns success operation outcome",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/FamilyMemberHistory/{id}" : {
-      "get" : {
-        "summary" : "Returns FamilyMemberHistory details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  FamilyMemberHistory resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns FamilyMemberHistory details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/FamilyMemberHistory"
+    "/DiagnosticReport": {
+      "post": {
+        "summary": "Create DiagnosticReport resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "DiagnosticReport resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DiagnosticReport"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Returns DiagnosticReport matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "The subject of the report",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "service",
+            "in": "query",
+            "description": "Which diagnostic discipline/department created the report",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of DiagnosticReport resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/DiagnosticReport"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Location/{id}" : {
-      "get" : {
-        "summary" : "Returns Location details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Location resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Location details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Location"
+    "/Person": {
+      "post": {
+        "summary": "Create Person resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Person resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Person"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       },
-      "delete" : {
-        "summary" : "Returns Location details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Location resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete Location details of given id"
+      "get": {
+        "summary": "Returns Person matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "birthdate",
+            "in": "query",
+            "description": "The person's date of birth",
+            "required": false,
+            "type": "string"
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
+          {
+            "name": "gender",
+            "in": "query",
+            "description": "The gender of the person",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "A portion of name in any name part",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
           }
-        }
-      },
-      "put" : {
-        "summary" : "Update Location resource from the content of the request",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "Location resource object",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/Location"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Location resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns success operation outcome",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Person resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Person"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Condition/{id}" : {
-      "get" : {
-        "summary" : "Returns Condition details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Condition resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Condition details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Condition"
+    "/Observation/{id}": {
+      "get": {
+        "summary": "Returns Observation details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Observation resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Observation details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Observation"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Returns Observation details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Observation resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Observation details of given id"
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Observation resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Observation resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Observation"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Observation resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/DiagnosticReport/{id}" : {
-      "get" : {
-        "summary" : "Returns DiagnosticReport details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  DiagnosticReport resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns DiagnosticReport details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/DiagnosticReport"
+    "/Observation": {
+      "post": {
+        "summary": "Create Observation resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Observation resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Observation"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       },
-      "delete" : {
-        "summary" : "Returns DiagnosticReport details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  DiagnosticReport resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete DiagnosticReport details of given id"
+      "get": {
+        "summary": "Returns Observation matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Obtained date/time. If the obtained element is a period, a date that falls in the period",
+            "required": false,
+            "type": "string"
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
+          {
+            "name": "code",
+            "in": "query",
+            "description": "The code of the observation type",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "The subject that the observation is about",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "patient",
+            "in": "query",
+            "description": "The subject that the observation is about (if patient)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "value-concept",
+            "in": "query",
+            "description": "The value of the observation, if the value is a CodeableConcept",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
           }
-        }
-      },
-      "put" : {
-        "summary" : "Update DiagnosticReport resource from the content of the request",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "DiagnosticReport resource object",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/DiagnosticReport"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  DiagnosticReport resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns success operation outcome",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Observation resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Observation"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-      "get" : {
-        "summary" : "Returns Practitioner matching results",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A practitioner's Identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "given",
-          "in" : "query",
-          "description" : "A portion of the given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "A portion of either family or given name",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "_id",
-          "in" : "query",
-          "description" : "The ID of the resource",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "family",
-          "in" : "query",
-          "description" : "A portion of the family name",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Bundle of Practitioner resources",
-            "schema" : {
-              "type" : "array",
-              "$ref" : "#/definitions/Practitioner"
+    "/FamilyMemberHistory/{id}": {
+      "get": {
+        "summary": "Returns FamilyMemberHistory details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  FamilyMemberHistory resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns FamilyMemberHistory details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/FamilyMemberHistory"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Encounter/{id}" : {
-      "get" : {
-        "summary" : "Returns Encounter details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Encounter resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Encounter details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Encounter"
+    "/Location/{id}": {
+      "get": {
+        "summary": "Returns Location details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Location resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Location details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Location"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       },
-      "delete" : {
-        "summary" : "Returns Encounter details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Encounter resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete Encounter details of given id"
+      "delete": {
+        "summary": "Returns Location details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Location resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Location details of given id"
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Location resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Location resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Location"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Location resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Patient/{id}" : {
-      "get" : {
-        "summary" : "Returns Patient details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Patient resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Patient details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Patient"
+    "/Condition/{id}": {
+      "get": {
+        "summary": "Returns Condition details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Condition resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Condition details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Condition"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "delete" : {
-        "summary" : "Returns Patient details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Patient resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete Patient details of given id"
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
-            }
-          }
-        }
-      },
-      "put" : {
-        "summary" : "Update Patient resource from the content of the request",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "Patient resource object",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/Patient"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Patient resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns success operation outcome",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
-            }
-          },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Person/{id}" : {
-      "get" : {
-        "summary" : "Returns Person details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Person resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Person details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Person"
+    "/DiagnosticReport/{id}": {
+      "get": {
+        "summary": "Returns DiagnosticReport details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  DiagnosticReport resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns DiagnosticReport details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/DiagnosticReport"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       },
-      "delete" : {
-        "summary" : "Returns Person details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Person resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Delete Person details of given id"
+      "delete": {
+        "summary": "Returns DiagnosticReport details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  DiagnosticReport resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete DiagnosticReport details of given id"
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       },
-      "put" : {
-        "summary" : "Update Person resource from the content of the request",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "Person resource object",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/Person"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Person resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns success operation outcome",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/OperationOutcome"
+      "put": {
+        "summary": "Update DiagnosticReport resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "DiagnosticReport resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DiagnosticReport"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  DiagnosticReport resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     },
-    "/Practitioner/{id}" : {
-      "get" : {
-        "summary" : "Returns Practitioner details of given id",
-        "produces" : [ "application/json", "application/xml", "application/xml+fhir", "application/json+fhir" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Id of the  Practitioner resource",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns Practitioner details of given id",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/Practitioner"
+    "/Practitioner": {
+      "post": {
+        "summary": "Create Practitioner resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Practitioner resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Practitioner"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
             }
           },
-          "404" : {
-            "description" : "When error occurred",
-            "schema" : {
-              "type" : "object",
-              "$ref" : "#/definitions/GeneralError"
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Returns Practitioner matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "description": "A practitioner's Identifier",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "given",
+            "in": "query",
+            "description": "A portion of the given name",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "A portion of either family or given name",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "family",
+            "in": "query",
+            "description": "A portion of the family name",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Practitioner resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Practitioner"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Patient/{id}/$everything": {
+      "post": {
+        "summary": "Returns Patient everything of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Patient resource",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Patient resource constant body parameter",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Patient everything of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/AllergyIntolerance": {
+      "get": {
+        "summary": "Returns AllergyIntolerance matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "patient",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of AllergyIntolerance resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/AllergyIntolerance"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Encounter/{id}": {
+      "get": {
+        "summary": "Returns Encounter details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Encounter resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Encounter details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Encounter"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Returns Encounter details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Encounter resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Encounter details of given id"
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Patient": {
+      "post": {
+        "summary": "Create Patient resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Patient resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Returns Patient matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "careprovider",
+            "in": "query",
+            "description": "Patient's nominated care provider, could be a care manager, not the organization that manages the record",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "given",
+            "in": "query",
+            "description": "A portion of the given name of the patient",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "identifier",
+            "in": "query",
+            "description": "A patient identifier",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "A portion of either family or given name of the patient",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "description": "Whether the patient record is active",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "family",
+            "in": "query",
+            "description": "A portion of the family name of the patient",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Patient resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Patient/{id}": {
+      "get": {
+        "summary": "Returns Patient details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Patient resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Patient details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Returns Patient details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Patient resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Patient details of given id"
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Patient resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Patient resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Patient resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Person/{id}": {
+      "get": {
+        "summary": "Returns Person details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Person resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Person details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Person"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Returns Person details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Person resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Person details of given id"
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Person resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Person resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Person"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Person resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Condition": {
+      "get": {
+        "summary": "Returns Condition matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "patient",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Condition resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Condition"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/FamilyMemberHistory": {
+      "get": {
+        "summary": "Returns FamilyMemberHistory matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "patient",
+            "in": "query",
+            "description": "The identity of a subject to list family member history items for",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of FamilyMemberHistory resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/FamilyMemberHistory"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Location": {
+      "post": {
+        "summary": "Create Location resource from the content of the request",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Location resource object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Location"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success operation outcome",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/OperationOutcome"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Returns Location matching results",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "A (portion of the) name of the location",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "The ID of the resource",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Searches for locations with a specific kind of status",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bundle of Location resources",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/Location"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Practitioner/{id}": {
+      "get": {
+        "summary": "Returns Practitioner details of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Practitioner resource",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Practitioner details of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Practitioner"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
+            }
+          }
+        }
+      }
+    },
+    "/Encounter/{id}/$everything": {
+      "post": {
+        "summary": "Returns Encounter everything of given id",
+        "produces": [
+          "application/json",
+          "application/xml",
+          "application/xml+fhir",
+          "application/json+fhir"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the  Encounter resource",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Encounter resource constant body parameter",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Encounter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Encounter everything of given id",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Encounter"
+            }
+          },
+          "404": {
+            "description": "When error occurred",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/GeneralError"
             }
           }
         }
       }
     }
   },
-  "definitions" : {
-    "Condition" : {
-      "type" : "object"
+  "definitions": {
+    "Condition": {
+      "type": "object"
     },
-    "Bundle" : {
-      "type" : "object"
+    "Bundle": {
+      "type": "object"
     },
-    "DiagnosticReport" : {
-      "type" : "object"
+    "DiagnosticReport": {
+      "type": "object"
     },
-    "Patient" : {
-      "type" : "object"
+    "Patient": {
+      "type": "object"
     },
-    "Practitioner" : {
-      "type" : "object"
+    "Practitioner": {
+      "type": "object"
     },
-    "AllergyIntolerance" : {
-      "type" : "object"
+    "AllergyIntolerance": {
+      "type": "object"
     },
-    "FamilyMemberHistory" : {
-      "type" : "object"
+    "FamilyMemberHistory": {
+      "type": "object"
     },
-    "OperationOutcome" : {
-      "type" : "object"
+    "OperationOutcome": {
+      "type": "object"
     },
-    "Observation" : {
-      "type" : "object"
+    "Observation": {
+      "type": "object"
     },
-    "Encounter" : {
-      "type" : "object"
+    "Encounter": {
+      "type": "object"
     },
-    "Person" : {
-      "type" : "object"
+    "Person": {
+      "type": "object"
     },
-    "GeneralError" : {
-      "type" : "object"
+    "GeneralError": {
+      "type": "object"
     },
-    "Location" : {
-      "type" : "object"
+    "Location": {
+      "type": "object"
     }
   },
-  "externalDocs" : {
-    "description" : "Find more info here",
-    "url" : "https://wiki.openmrs.org/display/projects/OpenMRS+FHIR+Module"
+  "externalDocs": {
+    "description": "Find more info here",
+    "url": "https://wiki.openmrs.org/display/projects/OpenMRS+FHIR+Module"
   },
-  "parameters" : {
-    "formatParam" : {
-      "name" : "_format",
-      "in" : "query",
-      "description" : "Format parameter can use to get response by setting _fromat param value                                            from xml by _format=xml and response from json by _format=json",
-      "required" : false,
-      "type" : "string"
+  "parameters": {
+    "formatParam": {
+      "name": "_format",
+      "in": "query",
+      "description": "Format parameter can use to get response by setting _fromat param value                                            from xml by _format=xml and response from json by _format=json",
+      "required": false,
+      "type": "string"
     }
   }
 }
