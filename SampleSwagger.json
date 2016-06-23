@@ -81,9 +81,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Encounter"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -116,9 +113,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/AllergyIntolerance"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -271,9 +265,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Person"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -306,9 +297,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Observation"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -467,9 +455,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Observation"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -502,9 +487,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/FamilyMemberHistory"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -537,9 +519,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Location"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -820,9 +799,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Practitioner"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -901,9 +877,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/AllergyIntolerance"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -936,9 +909,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Encounter"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1023,15 +993,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A patient identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "given",
           "in" : "query",
           "description" : "A portion of the given name of the patient",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "identifier",
+          "in" : "query",
+          "description" : "A patient identifier",
           "required" : false,
           "type" : "string"
         }, {
@@ -1065,9 +1035,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Patient"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1100,9 +1067,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Patient"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1199,9 +1163,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Person"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1342,9 +1303,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/FamilyMemberHistory"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1421,9 +1379,6 @@
             "schema" : {
               "type" : "array",
               "$ref" : "#/definitions/Location"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1456,9 +1411,6 @@
             "schema" : {
               "type" : "object",
               "$ref" : "#/definitions/Practitioner"
-            },
-            "examples" : {
-              "application/json" : "{}"
             }
           },
           "404" : {
