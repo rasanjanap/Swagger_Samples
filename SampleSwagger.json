@@ -276,7 +276,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{\n  \"resourceType\": \"Person\",\n  \"id\": \"dda12af7-1691-11df-97a5-7038c432aabf\",\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
+              "application/json" : "{}"
             }
           },
           "404" : {
@@ -1210,7 +1210,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{\n  \"resourceType\": \"Person\",\n  \"id\": \"dda12af7-1691-11df-97a5-7038c432aabf\",\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
+              "application/json" : "{}"
             }
           },
           "404" : {
