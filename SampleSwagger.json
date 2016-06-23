@@ -118,7 +118,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{\n   \"resourceType\": \"AllergyIntolerance\",\n   \"id\": \"249d8c08-f453-4e7d-a46d-f68659e7d9e7\",\n   \"recordedDate\": \"2015-03-31T00:00:00\",\n   \"subject\": {\n      \"reference\": \"Patient/dd9a7551-1691-11df-97a5-7038c432aabf\",\n      \"display\": \"John Shavola(Identifier:7279MP-4)\"\n   },\n   \"substance\": {\n      \"coding\": [\n         {\n            \"system\": \"http://openmrs.org\",\n            \"code\": \"be4d5acd-1691-11df-97a5-7038c432aabf\",\n            \"display\": \"AMYLASE\"\n         }\n      ]\n   },\n   \"criticality\": \"unassessible\"\n}"
+              "application/json" : "{}"
             }
           },
           "404" : {
@@ -903,7 +903,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{\n   \"resourceType\": \"AllergyIntolerance\",\n   \"id\": \"249d8c08-f453-4e7d-a46d-f68659e7d9e7\",\n   \"recordedDate\": \"2015-03-31T00:00:00\",\n   \"subject\": {\n      \"reference\": \"Patient/dd9a7551-1691-11df-97a5-7038c432aabf\",\n      \"display\": \"John Shavola(Identifier:7279MP-4)\"\n   },\n   \"substance\": {\n      \"coding\": [\n         {\n            \"system\": \"http://openmrs.org\",\n            \"code\": \"be4d5acd-1691-11df-97a5-7038c432aabf\",\n            \"display\": \"AMYLASE\"\n         }\n      ]\n   },\n   \"criticality\": \"unassessible\"\n}"
+              "application/json" : "{}"
             }
           },
           "404" : {
