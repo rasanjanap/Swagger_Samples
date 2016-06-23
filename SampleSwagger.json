@@ -276,7 +276,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\n  \"resourceType\": \"Person\",\n  \"id\": \"dda12af7-1691-11df-97a5-7038c432aabf\",\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
             }
           },
           "404" : {
@@ -440,15 +440,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "patient",
-          "in" : "query",
-          "description" : "The subject that the observation is about (if patient)",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "subject",
           "in" : "query",
           "description" : "The subject that the observation is about",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patient",
+          "in" : "query",
+          "description" : "The subject that the observation is about (if patient)",
           "required" : false,
           "type" : "string"
         }, {
@@ -1076,7 +1076,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\n  \"resourceType\": \"Patient\",\n  \"id\": \"example\",\n  \"identifier\": [\n    {\n      \"use\": \"usual\",\n      \"label\": \"MRN\",\n      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",\n      \"value\": \"12345\",\n      \"period\": {\n        \"start\": \"2001-05-06\"\n      },\n      \"assigner\": {\n        \"display\": \"Acme Healthcare\"\n      }\n    }\n  ],\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"telecom\": [\n    {\n      \"use\": \"home\"\n    },\n    {\n      \"system\": \"phone\",\n      \"value\": \"(03) 5555 6473\",\n      \"use\": \"work\"\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"deceasedBoolean\": false,\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
             }
           },
           "404" : {
@@ -1111,7 +1111,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\n  \"resourceType\": \"Patient\",\n  \"id\": \"example\",\n  \"identifier\": [\n    {\n      \"use\": \"usual\",\n      \"label\": \"MRN\",\n      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",\n      \"value\": \"12345\",\n      \"period\": {\n        \"start\": \"2001-05-06\"\n      },\n      \"assigner\": {\n        \"display\": \"Acme Healthcare\"\n      }\n    }\n  ],\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"telecom\": [\n    {\n      \"use\": \"home\"\n    },\n    {\n      \"system\": \"phone\",\n      \"value\": \"(03) 5555 6473\",\n      \"use\": \"work\"\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"deceasedBoolean\": false,\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
             }
           },
           "404" : {
@@ -1210,7 +1210,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\n  \"resourceType\": \"Person\",\n  \"id\": \"dda12af7-1691-11df-97a5-7038c432aabf\",\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"family\": [\n        \"Chalmers\"\n      ],\n      \"given\": [\n        \"Peter\",\n        \"James\"\n      ]\n    },\n    {\n      \"use\": \"usual\",\n      \"given\": [\n        \"Jim\"\n      ]\n    }\n  ],\n  \"gender\": \"male\",\n  \"birthDate\": \"1974-12-25\",\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"line\": [\n        \"534 Erewhon St\"\n      ],\n      \"city\": \"PleasantVille\",\n      \"state\": \"Vic\",\n      \"postalCode\": \"3999\"\n    }\n  ],\n  \"active\": true\n}"
             }
           },
           "404" : {
