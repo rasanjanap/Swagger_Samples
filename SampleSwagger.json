@@ -83,7 +83,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -118,7 +118,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -191,7 +191,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -276,7 +276,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -311,7 +311,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -472,7 +472,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -507,7 +507,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -542,7 +542,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -641,7 +641,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -676,7 +676,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -831,7 +831,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -912,7 +912,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -947,7 +947,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1076,7 +1076,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1111,7 +1111,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1210,7 +1210,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1315,7 +1315,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1356,7 +1356,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1435,7 +1435,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
@@ -1470,7 +1470,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{}"
+              "application/json" : "{\"resourceType\":\"OperationOutcome\",\"issue\":[{\"severity\":\"error\",\"details\":\"Details of error\"}]}"
             }
           },
           "404" : {
