@@ -83,7 +83,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -118,7 +118,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -191,7 +191,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -276,7 +276,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -311,7 +311,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -472,7 +472,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -507,7 +507,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -542,7 +542,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -641,7 +641,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -676,7 +676,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -831,7 +831,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -912,7 +912,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -947,7 +947,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1032,15 +1032,15 @@
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "identifier",
-          "in" : "query",
-          "description" : "A patient identifier",
-          "required" : false,
-          "type" : "string"
-        }, {
           "name" : "given",
           "in" : "query",
           "description" : "A portion of the given name of the patient",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "identifier",
+          "in" : "query",
+          "description" : "A patient identifier",
           "required" : false,
           "type" : "string"
         }, {
@@ -1076,7 +1076,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1111,7 +1111,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1210,7 +1210,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1315,7 +1315,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1356,7 +1356,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1435,7 +1435,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
@@ -1470,7 +1470,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Patient\",  \"id\": \"example\",  \"identifier\": [    {      \"use\": \"usual\",      \"label\": \"MRN\",      \"system\": \"urn:oid:1.2.36.146.595.217.0.1\",      \"value\": \"12345\",      \"period\": {        \"start\": \"2001-05-06\"      },      \"assigner\": {        \"display\": \"Acme Healthcare\"      }    }  ],  \"name\": [    {      \"use\": \"official\",      \"family\": [        \"Chalmers\"      ],      \"given\": [        \"Peter\",        \"James\"      ]    },    {      \"use\": \"usual\",      \"given\": [        \"Jim\"      ]    }  ],  \"telecom\": [    {      \"use\": \"home\"    },    {      \"system\": \"phone\",      \"value\": \"(03) 5555 6473\",      \"use\": \"work\"    }  ],  \"gender\": \"male\",  \"birthDate\": \"1974-12-25\",  \"deceasedBoolean\": false,  \"address\": [    {      \"use\": \"home\",      \"line\": [        \"534 Erewhon St\"      ],      \"city\": \"PleasantVille\",      \"state\": \"Vic\",      \"postalCode\": \"3999\"    }  ],  \"active\": true}"
+              "application/json" : "{\"abc\":\"abc\"}"
             }
           },
           "404" : {
