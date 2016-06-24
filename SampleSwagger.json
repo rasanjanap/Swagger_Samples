@@ -83,7 +83,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -118,7 +118,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -191,7 +191,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -276,7 +276,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -311,7 +311,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -472,7 +472,7 @@
               "$ref" : "#/definitions/Observation"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -507,7 +507,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -542,7 +542,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -641,7 +641,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -676,7 +676,7 @@
               "$ref" : "#/definitions/DiagnosticReport"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -831,7 +831,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -912,7 +912,7 @@
               "$ref" : "#/definitions/AllergyIntolerance"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -947,7 +947,7 @@
               "$ref" : "#/definitions/Encounter"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1076,7 +1076,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1111,7 +1111,7 @@
               "$ref" : "#/definitions/Patient"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1210,7 +1210,7 @@
               "$ref" : "#/definitions/Person"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1315,7 +1315,7 @@
               "$ref" : "#/definitions/Condition"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1356,7 +1356,7 @@
               "$ref" : "#/definitions/FamilyMemberHistory"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1435,7 +1435,7 @@
               "$ref" : "#/definitions/Location"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
@@ -1470,7 +1470,7 @@
               "$ref" : "#/definitions/Practitioner"
             },
             "examples" : {
-              "application/json" : "{  \"resourceType\": \"Location\",  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",  \"name\": \"South Wing, second floor\",  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",  \"address\": {    \"use\": \"work\",    \"line\": [      \"Galapagosweg 91, Building A\",\"line 3\", \"line 4\", \"line 5\"    ],    \"city\": \"Den Burg\",    \"postalCode\": \"9105 PZ\",    \"country\": \"NLD\",    \"state\":\"southern\"  },  \"position\": {    \"longitude\": -83.6945691,    \"latitude\": 42.25475478,  },  \"partOf\": {     \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\"     \"display\": \"Mosoriot Hospital\"  },  \"status\": \"active\"}"
+              "application/json" : "{\n  \"resourceType\": \"Location\",\n  \"id\": \"a846f32f-5401-4d53-871a-68354c22c3f9\",\n  \"name\": \"South Wing, second floor\",\n  \"description\": \"Second floor of the Old South Wing, formerly in use by Psychiatry\",\n  \"address\": {\n    \"use\": \"work\",\n    \"line\": [\n      \"Galapagosweg 91, Building A\",\n      \"line 3\",\n      \"line 4\",\n      \"line 5\"\n    ],\n    \"city\": \"Den Burg\",\n    \"postalCode\": \"9105 PZ\",\n    \"country\": \"NLD\",\n    \"state\": \"southern\"\n  },\n  \"position\": {\n    \"longitude\": -83.6945691,\n    \"latitude\": 42.25475478\n  },\n  \"partOf\": {\n    \"reference\": \"Location/c0937d4f-1691-11df-97a5-7038c432aabf\",\n    \"display\": \"Mosoriot Hospital\"\n  },\n  \"status\": \"active\"\n}"
             }
           },
           "404" : {
